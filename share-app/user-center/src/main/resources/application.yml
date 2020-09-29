@@ -1,0 +1,21 @@
+
+spring:
+  application:
+    name: user-center
+  datasource:
+    url: jdbc:mysql://rm-uf6m7500g66x1ms64eo.mysql.rds.aliyuncs.com:3306/user_center?useUnide=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2b8
+    hikari:
+      username: wanghuanle
+      password: wanghuanle
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: 683133ee-7701-41e8-9655-27cac8a8385c
+        metadata:
+          instance: zhent
+
+server:
+  port: 9203

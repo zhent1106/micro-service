@@ -19,7 +19,7 @@
     </properties>
     <dependencyManagement>
         <dependencies>
-            <!--整合spring cloud-->
+            <!--            整合spring cloud-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -27,7 +27,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--整合spring cloud alibaba-->
             <!--            整合spring cloud alibaba-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
@@ -37,11 +36,21 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
+<!--        整合nacos-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>2.2.3.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -54,6 +63,7 @@
             </exclusions>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
